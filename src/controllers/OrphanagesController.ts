@@ -53,7 +53,7 @@ export default {
           about,
           instructions,
           opening_hours,
-          open_on_weekends,
+          open_on_weekends: open_on_weekends === 'true',
           images,
         };
 
@@ -71,7 +71,7 @@ export default {
             })
           )
         });
-
+        
         await schema.validate(data, {
           // isso faz com q ele mostre tds as msgs de erro, e não pare e mostre somente o primeiro erro
           abortEarly: false,
